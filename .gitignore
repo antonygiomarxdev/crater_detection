@@ -1,0 +1,117 @@
+# CMake files
+*/CMakeFiles
+*/CMakeCache.txt
+*/Makefile
+*/cmake_install.cmake
+
+# macOS specific files
+.DS_Store
+
+# Python specific files and directories
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Python build directories
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Python testing files
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Localization files
+*.mo
+*.pot
+
+# Log files
+*.log
+
+# Django specific files
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask specific files
+instance/
+
+# Web cache files
+.webassets-cache
+.scrapy
+docs/_build/
+
+# Python build tools
+.pybuilder/
+target/
+.pdm.toml
+__pypackages__/
+
+# Celery specific files
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath specific files
+*.sage.py
+
+# Environment variables
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE project files
+.idea/
+.spyderproject
+.spyproject
+.ropeproject
+/site
+
+# Type checker
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Python validator
+.pyre/
+
+# Static type checker
+.pytype/
+
+# Cython
+cython_debug/
+
+# IPython
+.ipynb_checkpoints
+profile_default/
+ipython_config.py
