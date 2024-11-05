@@ -1,24 +1,20 @@
 # Use a base image of Python with GDAL pre-installed for compatibility with rasterio
 FROM osgeo/gdal:ubuntu-full-3.5.1
 
-# Define variables
-ARG PYTHON_VERSION=3
-ARG PIP_UPGRADE_CMD="pip install --upgrade pip"
-ARG REQUIREMENTS_INSTALL_CMD="pip install --no-cache-dir -r requirements.txt"
-
-# Install Python and other system requirements
+# Install Python and other necessary system packages
 RUN apt-get update && \
-    apt-get install -y python${PYTHON_VERSION}-pip python${PYTHON_VERSION}-dev
+    apt-get install -y python3 python3-pip python3-dev && \
+    apt-get clean
 
 # Set the working directory
 WORKDIR /app
 
-# Copy the requirements file and install Python dependencies
+# Copy the requirements file and install Python dependencies using pip3
 COPY requirements.txt .
-RUN ${PIP_UPGRADE_CMD} && \
-    ${REQUIREMENTS_INSTALL_CMD}
+RUN pip3 install --upgrade pip && \
+    pip3 install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the project
+# Copy the rest of the project files
 COPY . .
 
 # Expose the port for the API
